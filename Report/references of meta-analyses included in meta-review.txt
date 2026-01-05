@@ -1,0 +1,110 @@
+# Reference list of the meta-analyses included in the meta-review
+
+Sadozai, A.K., Sun, C., Demetriou, E.A. et al. Executive function in children with neurodevelopmental conditions: a systematic review and meta-analysis. Nat Hum Behav 8, 2357-2366 (2024). https://doi.org/10.1038/s41562-024-02000-9
+
+Dekkers, T. J., Popma, A., van Rentergem, J. A. A., Bexkens, A., & Huizenga, H. M. (2016). Risky decision making in attention-deficit/hyperactivity disorder: A meta-regression analysis. Clinical psychology review, 45, 1-16. https://doi.org/10.1016/j.cpr.2016.03.001
+
+Li, Y., & Zhao, X. (2025). The Face Processing Deficit in Developmental Dyslexia: A Meta‐Analysis. Dyslexia, 31(2), e70007. https://doi.org/10.1002/dys.70007
+
+de la Paz, L., Whitney, B. M., Weires, E. M., & Nikolas, M. A. (2025). A meta-analytic evaluation of cognitive endophenotypes for attention-deficit/hyperactivity disorder: Comparisons of unaffected relatives and controls. Journal of Psychopathology and Clinical Science, 134(3), 319-338. https://doi.org/10.1037/abn0000985
+
+Haza, B., Gosling, C. J., Ciminaghi, F., Conty, L., & Pinabiaux, C. (2024). Research Review: Social cognition and everyday social skills in children and adolescents with attention‐deficit/hyperactivity disorder: a meta‐analysis of case-control studies. Journal of Child Psychology and Psychiatry, 65(9), 1245-1254. https://doi.org/10.1111/jcpp.14006
+
+Senkowski, D., Ziegler, T., Singh, M., Heinz, A., He, J., Silk, T., & Lorenz, R. C. (2024). Assessing inhibitory control deficits in adult ADHD: A systematic review and meta-analysis of the stop-signal task. Neuropsychology Review, 34(2), 548-567. https://doi.org/10.1007/s11065-023-09592-5
+
+Nejati, V., Peyvandi, A., Nazari, N., & Dehghan, M. (2024). Cognitive Correlates of Risky Decision-Making in Individuals with and without ADHD: A Meta-analysis. Neuropsychology Review, 1-17. https://doi.org/10.1007/s11065-024-09646-2
+
+Metcalfe, K. B., McFeaters, C. D., & Voyer, D. (2024). Time-Perception Deficits in Attention-Deficit/Hyperactivity Disorder: A Systematic Review and Meta-Analysis. Developmental Neuropsychology, 49(1), 1-24. https://doi.org/10.1080/87565641.2023.2293712
+
+Sells, R. C., Liversedge, S. P., & Chronaki, G. (2024). Vocal emotion recognition in attention-deficit hyperactivity disorder: a meta-analysis. Cognition and Emotion, 38(1), 23-43. https://doi.org/10.1080/02699931.2023.2258590
+
+Georgiou, G. K., Vieira, A. P. A., Rothou, K. M., Kirby, J. R., Antoniuk, A., Martinez, D., & Guo, K. (2023). A Meta-analysis of Morphological Awareness Deficits in Developmental Dyslexia. Scientific Studies of Reading, 27(3), 253-271. https://doi.org/10.1080/10888438.2022.2155524
+
+Orban, S. A., Festini, S. B., Yuen, E. K., & Friedman, L. M. (2022). Verbal memory interference in attention-deficit hyperactivity disorder: A meta-analytic review. Journal of Attention Disorders, 26(12), 1549-1562. https://doi.org/10.1177/10870547221085515
+
+Maron, D. N., Bowe, S. J., Spencer-Smith, M., Mellahn, O. J., Perrykkad, K., Bellgrove, M. A., & Johnson, B. P. (2021). Oculomotor deficits in attention deficit hyperactivity disorder (ADHD): A systematic review and comprehensive meta-analysis. Neuroscience & Biobehavioral Reviews, 131, 1198-1213. https://doi.org/10.1016/j.neubiorev.2021.10.012
+
+Carioti, D., Masia, M. F., Travellini, S., & Berlingeri, M. (2021). Orthographic depth and developmental dyslexia: A meta-analytic study. Annals of Dyslexia, 71(3), 399-438. https://doi.org/10.1007/s11881-021-00226-0
+
+Georgiou, G. K., Martinez, D., Vieira, A. P. A., & Guo, K. (2021). Is orthographic knowledge a strength or a weakness in individuals with dyslexia? Evidence from a meta-analysis. Annals of Dyslexia, 71(1), 5-27. https://doi.org/10.1007/s11881-021-00220-6
+
+Gavril, L., Roșan, A., & Szamosközi, Ștefan. (2021). The role of visual-spatial attention in reading development: a meta-analysis. Cognitive Neuropsychology, 38(6), 387-407. https://doi.org/10.1080/02643294.2022.2043839
+
+Nejati, V., & Yazdani, S. (2020). Time perception in children with attention deficit-hyperactivity disorder (ADHD): Does task matter? A meta-analysis study. Child Neuropsychology, 26(7), 900-916. https://doi.org/10.1080/09297049.2020.1712347
+
+Ramos, A. A., Hamdan, A. C., & Machado, L. (2020). A meta-analysis on verbal working memory in children and adolescents with ADHD. The Clinical Neuropsychologist, 34(5), 873-898. https://doi.org/10.1080/13854046.2019.1604998
+
+Lonergan, A., Doyle, C., Cassidy, C., MacSweeney Mahon, S., Roche, R. A. P., Boran, L., & Bramham, J. (2019). A meta-analysis of executive functioning in dyslexia with consideration of the impact of comorbid ADHD. Journal of Cognitive Psychology, 31(7), 725-749. https://doi.org/10.1080/20445911.2019.1669609
+
+Araújo, S., & Faísca, L. (2019). A Meta-Analytic Review of Naming-Speed Deficits in Developmental Dyslexia. Scientific Studies of Reading, 23(5), 349-368. https://doi.org/10.1080/10888438.2019.1572758
+
+Parsons, T. D., Duffield, T., & Asbee, J. (2019). A comparison of virtual reality classroom continuous performance tests to traditional continuous performance tests in delineating ADHD: a meta-analysis. Neuropsychology review, 29(3), 338-356. https://doi.org/10.1007/s11065-019-09407-6
+
+Patros, C. H. G., Tarle, S. J., Alderson, R. M., Lea, S. E., & Arrington, E. F. (2019). Planning deficits in children with attention-deficit/hyperactivity disorder (ADHD): A meta-analytic review of tower task performance. Neuropsychology, 33(3), 425-444. https://doi.org/10.1037/neu0000531
+
+Skodzik, T., Holling, H., & Pedersen, A. (2017). Long-term memory performance in adult ADHD: A meta-analysis. Journal of attention disorders, 21(4), 267-283. https://doi.org/10.1177/1087054713510561
+
+Balogh, L., & Czobor, P. (2016). Post-error slowing in patients with ADHD: a meta-analysis. Journal of attention disorders, 20(12), 1004-1016. https://doi.org/10.1177/1087054714528043
+
+Snowling, M. J., & Melby-Lervåg, M. (2016). Oral language deficits in familial dyslexia: A meta-analysis and review.Psychological Bulletin, 142(5), 498-545. https://doi.org/10.1037/bul0000037
+
+Peng, P., & Fuchs, D. (2016). A Meta-Analysis of Working Memory Deficits in Children With Learning Difficulties: Is There a Difference Between Verbal Domain and Numerical Domain? Is There a Difference Between Verbal Domain and Numerical Domain? Journal of Learning Disabilities, 49(1), 3-20. https://doi.org/10.1177/0022219414521667
+
+Pauli-Pott, U., & Becker, K. (2015). Time windows matter in ADHD-related developing neuropsychological basic deficits: A comprehensive review and meta-regression analysis. Neuroscience & Biobehavioral Reviews, 55, 165-172. https://doi.org/10.1016/j.neubiorev.2015.04.011
+
+Mowinckel, A. M., Pedersen, M. L., Eilertsen, E., & Biele, G. (2015). A meta-analysis of decision-making and attention in adults with ADHD. Journal of attention disorders, 19(5), 355-367. https://doi.org/10.1177/1087054714558872
+
+Kudo, M. F., Lussier, C. M., & Swanson, H. L. (2015). Reading disabilities in children: A selective meta-analysis of the cognitive literature. Research in developmental disabilities, 40, 51-62. https://doi.org/10.1016/j.ridd.2015.01.002
+
+Badcock, N. A., & Kidd, J. C. (2015). Temporal variability predicts the magnitude of between-group attentional blink differences in developmental dyslexia: a meta-analysis. PeerJ, 3, e746. https://doi.org/10.7717/peerj.746
+
+Karalunas, S. L., Geurts, H. M., Konrad, K., Bender, S., & Nigg, J. T. (2014). Annual research review: Reaction time variability in ADHD and autism spectrum disorders: Measurement and mechanisms of a proposed trans‐diagnostic phenotype. Journal of Child Psychology and Psychiatry, 55(6), 685-710. https://doi.org/10.1111/jcpp.12217
+
+Kasper, L. J., Alderson, R. M., & Hudec, K. L. (2012). Moderators of working memory deficits in children with attention-deficit/hyperactivity disorder (ADHD): A meta-analytic review. Clinical psychology review, 32(7), 605-617. https://doi.org/10.1016/j.cpr.2012.07.001
+
+Hasson, R., & Fine, J. G. (2012). Gender differences among children with ADHD on continuous performance tests: a meta-analytic review. Journal of attention disorders, 16(3), 190-198. https://doi.org/10.1177/1087054711427398
+
+Huang-Pollock, C. L., Karalunas, S. L., Tam, H., & Moore, A. N. (2012). Evaluating vigilance deficits in ADHD: a meta-analysis of CPT performance. Journal of abnormal psychology, 121(2), 360-371. https://doi.org/10.1037/a0027205
+
+Pauli-Pott, U., & Becker, K. (2011). Neuropsychological basic deficits in preschoolers at risk for ADHD: A meta-analysis. Clinical Psychology Review, 31(4), 626-637. https://doi.org/10.1016/j.cpr.2011.02.005
+
+Booth, J. N., Boyle, J. M., & Kelly, S. W. (2010). Do tasks make a difference? Accounting for heterogeneity of performance of children with reading difficulties on tasks of executive function: Findings from a meta‐analysis. British Journal of Developmental Psychology, 28(1), 133-176. https://doi.org/10.1348/026151009X485432 
+
+Lipszyc, J., & Schachar, R. (2010). Inhibitory control and psychopathology: a meta-analysis of studies using the stop signal task. Journal of the International Neuropsychological Society, 16(6), 1064-1076. https://doi.org/10.1017/S1355617710000895 
+
+Bálint, S., Czobor, P., Komlósi, S., Meszaros, A., Simon, V., & Bitter, I. (2009). Attention deficit hyperactivity disorder (ADHD): gender-and age-related differences in neurocognition. Psychological medicine, 39(8), 1337-1345. https://doi.org/10.1017/S0033291708004236
+
+Swanson, H. L., Zheng, X., & Jerman, O. (2009). Working memory, short-term memory, and reading disabilities: A selective meta-analysis of the literature. Journal of learning disabilities, 42(3), 260-287. https://doi.org/10.1177/0022219409331958
+
+Swanson, H. L., & Hsieh, C. J. (2009). Reading disabilities in adults: A selective meta-analysis of the literature. Review of educational Research, 79(4), 1362-1390. https://doi.org/10.3102/0034654309350931
+
+Zaccaria, S. (2008). Memoria di lavoro attiva e Disturbo da Deficit di Attenzione/Iperattività: una rassegna e una meta-analisi. Psicologia clinica dello sviluppo, 12(1), 7-24. https://doi.org/10.1449/26782
+
+Alderson, R. M., Rapport, M. D., & Kofler, M. J. (2007). Attention-deficit/hyperactivity disorder and behavioral inhibition: a meta-analytic review of the stop-signal paradigm. Journal of abnormal child psychology, 35(5), 745-758. https://doi.org/10.1007/s10802-007-9131-6
+
+Lansbergen, M. M., Kenemans, J. L., & van Engeland, H. (2007). Stroop interference and attention-deficit/hyperactivity disorder: A review and meta-analysis. Neuropsychology, 21(2), 251-262. https://doi.org/10.1037/0894-4105.21.2.251
+
+Bridgett, D. J., & Walker, M. E. (2006). Intellectual functioning in adults with ADHD: A meta-analytic examination of full scale IQ differences between adults with and without ADHD. Psychological Assessment, 18(1), 1-14. https://doi.org/10.1037/1040-3590.18.1.1
+
+Jerman, O., & Swanson, H. L. (2005). Working memory and reading disabilities: A selective meta-analysis of the literature. In T. E. Scruggs & M. A. Mastropieri (Eds.), Cognition and learning in diverse settings (pp. 1-31). Emerald Group Publishing. https://doi.org/10.1016/S0735-004X(05)18001-X
+
+Boonstra, A. M., Oosterlaan, J., Sergeant, J. A., & Buitelaar, J. K. (2005). Executive functioning in adult ADHD: a meta-analytic review. Psychological medicine, 35(8), 1097-1108. https://doi.org/10.1017/S003329170500499X
+
+Willcutt, E. G., Doyle, A. E., Nigg, J. T., Faraone, S. V., & Pennington, B. F. (2005). Validity of the executive function theory of attention-deficit/hyperactivity disorder: a meta-analytic review. Biological psychiatry, 57(11), 1336-1346. https://doi.org/10.1016/j.biopsych.2005.02.006
+
+Schoechlin, C., & Engel, R. R. (2005). Neuropsychological performance in adult attention-deficit hyperactivity disorder: Meta-analysis of empirical data. Archives of Clinical Neuropsychology, 20(6), 727-744. https://doi.org/10.1016/j.acn.2005.04.005
+
+Martinussen, R., Hayden, J., Hogg-Johnson, S., & Tannock, R. (2005). A meta-analysis of working memory impairments in children with attention-deficit/hyperactivity disorder. Journal of the American academy of child & adolescent psychiatry, 44(4), 377-384. https://doi.org/10.1097/01.chi.0000153228.72591.73
+
+Frazier, T. W., Demaree, H. A., & Youngstrom, E. A. (2004). Meta-Analysis of Intellectual and Neuropsychological Test Performance in Attention-Deficit/Hyperactivity Disorder. Neuropsychology, 18(3), 543-555. https://doi.org/10.1037/0894-4105.18.3.543
+
+Romine, C. B., Lee, D., Wolfe, M. E., Homack, S., George, C., & Riccio, C. A. (2004). Wisconsin Card Sorting Test with children: a meta-analytic study of sensitivity and specificity. Archives of Clinical Neuropsychology, 19(8), 1027-1041. https://doi.org/10.1016/j.acn.2003.12.009
+
+Homack, S., & Riccio, C. A. (2004). A meta-analysis of the sensitivity and specificity of the Stroop Color and Word Test with children. Archives of clinical Neuropsychology, 19(6), 725-743. https://doi.org/10.1016/j.acn.2003.09.003
+
+Oosterlaan, J., Logan, G. D., & Sergeant, J. A. (1998). Response inhibition in AD/HD, CD, comorbid AD/HD+ CD, anxious, and control children: A meta-analysis of studies with the stop task. The Journal of Child Psychology and Psychiatry and Allied Disciplines, 39(3), 411-425. 
+
+Bieleninik, Ł., Gradys, G., Dzhambov, A. M., Walczak-Kozłowska, T., Lipowska, K., Łada-Maśko, A., ... & Lipowska, M. (2023). Attention deficit in primary-school-age children with attention deficit hyperactivity disorder measured with the attention network test: a systematic review and meta-analysis. Frontiers in Neuroscience, 17, 1246490. https://doi.org/10.3389/fnins.2023.1246490
+
+Melby-Lervåg, M., Lyster, S.-A. H., & Hulme, C. (2012). Phonological skills and their role in learning to read: A meta-analytic review. Psychological Bulletin, 138(2), 322-352. https://doi.org/10.1037/a0026744
+
