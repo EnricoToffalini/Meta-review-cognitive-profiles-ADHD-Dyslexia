@@ -1,0 +1,34 @@
+Title + Abstract Screening Instructions
+
+INCLUDE the record if, based on title/abstract, ALL of the following are likely true:
+1) The article is a meta-analysis or systematic review.
+2) It focuses on ADHD and/or developmental dyslexia / reading disability.
+3) It examines cognitive functioning, such as:
+   – working memory
+   – executive function / inhibitory control
+   – attention
+   – processing speed / speed of processing
+   – phonological processing / RAN
+   – other neurocognitive skills
+4) It either:
+   – compares individuals with ADHD or dyslexia to neurotypical controls, OR
+   – adopts a dimensional/continuous perspective linking cognitive performance to ADHD/dyslexia traits.
+
+EXCLUDE the record if ANY of the following apply:
+– Not a meta-analysis or systematic review.
+– Not focused on ADHD or dyslexia/reading disorder.
+– Does not examine cognitive functioning (e.g., only symptoms, diagnosis, behavior).
+– Focuses on intervention, treatment, rehabilitation, or medication effects.
+– Focuses only on prevalence, diagnostic classification, or neurobiological outcomes without cognitive results.
+– Compares clinical groups only (e.g., ADHD vs ASD; ADHD with comorbidities).
+– No neurotypical control group when the approach is categorical.
+– Non-human studies.
+
+Definitions & Notes:
+Cognitive outcomes of interest include working memory, inhibitory control, attention (e.g., sustained/selective), processing speed, phonological processing, rapid automatized naming (RAN), and standard neuropsychological measures (e.g., Wechsler subtests). Eligible designs include meta-analyses comparing clinical groups with controls or meta-analytic correlations between cognitive performance and symptom severity in general population samples. Not eligible are treatment-focused meta-analyses, or reviews that only examine etiology, neural mechanisms, prevalence, or diagnostic issues without cognitive outcomes.
+
+Output
+Your output should only be "0" or "1" (numeric). 
+If should clearly or probably be INCLUDED -> 1
+If should clearly or probably be EXCLUDED -> 0
+

@@ -1,0 +1,320 @@
+# Data Extraction Prompt (Protocol-Bound, Long-Format Ready)
+
+## Role and epistemic stance
+You are assisting with the data extraction phase of a preregistered meta-review on average cognitive features of children with ADHD and/or developmental dyslexia.
+
+Before extracting any data, reread the preregistration protocol (PDF) carefully.
+
+Your task is structured extraction and transcription, not interpretation or theorizing.
+- Do not infer missing values.
+- Do not “fix” unclear reporting.
+- Do not convert effect sizes unless the paper explicitly provides the converted value.
+- Only compute values when the computation is deterministic and explicitly allowed below.
+
+---
+
+## Inputs you will receive
+- The full text of an included meta-analysis (or substantial excerpts such as Abstract, Methods, Results, Tables, Supplements).
+
+Assume the article has already passed eligibility screening. If you notice a clear protocol-relevant scope problem, do not re-screen, but record it under `Notes` and `extraction_warnings`.
+
+---
+
+## Unit of extraction (long format)
+The unit of extraction is one meta-analytic pooled result per row, but each article may have several rows if it estimate multiple effect sizes (even if for domains and subdomain: extract all individual effect size estimates).
+
+Definition of “pooled result”:
+A pooled result is a meta-analytic quantitative synthesis that reports a single pooled effect size estimate for a defined outcome (or domain/subdomain/task), typically with a confidence interval or standard error, and derived from multiple primary studies.
+
+If a paper reports multiple pooled results (different domains, tasks, subgroups with separate pooled estimates, moderators reported as separate pooled estimates, ADHD vs dyslexia, categorical vs dimensional), extract each eligible pooled estimate as a separate row.
+
+Important:
+A single meta-analytic article may report both a broad pooled estimate (e.g., overall cognition or executive functions) and more specific pooled estimates (e.g., inhibition, working memory) based on the same or largely overlapping sets of primary studies.  
+In such cases, extract all eligible pooled estimates, and explicitly track their dependency using the fields `aggregation_level` and `evidence_group_id` (see below).
+
+---
+
+## Eligibility guardrails during extraction (row level)
+Extract a pooled result row only if it matches the protocol’s scope:
+1) Target disorder is ADHD or developmental dyslexia/reading disorder, explicitly analysed.
+2) Outcome is cognitive or neuropsychological (not symptoms-only, prevalence-only, diagnostic criteria-only, or neurobiology/neuroimaging without cognitive outcomes).
+3) Analytical framework is eligible:
+   - CATEGORICAL: ADHD/dyslexia/both group vs healthy/neurotypical/typically developing controls, or
+   - DIMENSIONAL: association between continuous ADHD / dyslexia(reading skill) traits and cognitive outcomes in general population or broadly sampled datasets.
+4) Exclude pooled results that are intervention or treatment focused (training, medication, therapy, educational intervention).
+5) Exclude pooled results where the comparator is exclusively non-healthy (clinical vs clinical only), unless the paper also provides a separable eligible healthy-control comparison.
+
+If a pooled result is mixed or ambiguous in eligibility, do not extract it, add an `extraction_warning` and explain briefly in `Notes`.
+
+---
+
+## Article metadata
+Among the article meta-data, "ID_article", and thus also the rows identifiers, must reflect the document (pdf) name, which is a number.
+
+---
+
+## Cognitive domain categorization (three levels, plus original label)
+Each extracted row must include:
+- `Trait_measured`: the authors’ original outcome/domain label (verbatim or near-verbatim).
+- `Domain_L1_general`: broad umbrella category (controlled vocabulary, see below).
+- `Domain_L2_specific`: more specific subdomain (controlled vocabulary where possible).
+- `Domain_L3_peculiar`: optional narrow label, used only when clearly indicated (task/paradigm-specific).
+
+Rules:
+- Always fill `Trait_measured` using the authors’ wording.
+- Fill Domain levels only when the mapping is clearly supported by the text (label, task description, or section header).
+- If you are unsure, fill only `Domain_L1_general` and leave `Domain_L2_specific` and `Domain_L3_peculiar` as null, and state the uncertainty in `Notes`.
+- If `Domain_L3_peculiar` is filled, `Domain_L1_general` and `Domain_L2_specific` must also be filled.
+
+### Domain_L1_general: controlled vocabulary (choose one when possible)
+- Attention
+- Executive functions
+- Working memory
+- Short-term memory
+- Processing speed
+- Phonological processing
+- Rapid automatized naming
+- Reading-related cognition
+- Language
+- Learning and memory
+- Intelligence / general cognition
+- Academic achievement
+- Decision-making / reinforcement learning
+- Reward processing / motivation
+- Perception (auditory/visual/time)
+- Oculomotor / motor control
+- Social cognition
+- Time perception
+- Other / unclear
+
+### Domain_L2_specific: common subdomains (choose when supported)
+Attention:
+- Sustained attention
+- Selective attention
+- Orienting attention
+- Alerting attention
+- Executive attention
+- Attention networks
+- Visual-spatial attention
+- Temporal attention
+
+Executive functions:
+- Inhibition / inhibitory control
+- Response inhibition
+- Set shifting / cognitive flexibility
+- Planning / organization
+- Error monitoring
+- Problem solving
+
+Memory:
+- Verbal working memory
+- Visual-spatial working memory
+- Auditory working memory
+- Numerical working memory
+- Verbal short-term memory
+- Short-term memory (unspecified)
+- Long-term memory
+- Recognition memory
+
+Processing speed and timing:
+- Processing speed (general)
+- Reaction time
+- Reaction time variability
+- Response latency
+- Post-error slowing
+
+Phonological and reading-related:
+- Phonological awareness
+- Phonemic awareness
+- Rime awareness
+- Phonological processing (other)
+- Reading accuracy
+- Reading fluency
+- Reading/decoding
+- Orthographic knowledge
+- Lexical orthographic processing
+- Sub-lexical orthographic processing
+
+RAN:
+- Rapid automatized naming
+- Naming speed
+
+Decision/reward:
+- Reinforcement learning
+- Temporal discounting
+- Risky decision-making
+- Delay aversion
+
+Perception:
+- Auditory perception
+- Visual perception
+- Time perception
+
+### Domain_L3_peculiar: free text examples (only if explicitly named)
+Examples: Attentional blink, Visual attention span, Visual search, Attentional orienting, Coherent dot motion, Post-error slowing, Time production, Time estimation, etc.
+
+---
+
+## Aggregation level and evidence dependency (required)
+For each extracted pooled result, explicitly code the level of aggregation and whether it shares underlying primary studies with other pooled results in the same article.
+
+- `aggregation_level` must be coded as one of:
+  - GLOBAL (very broad pooled estimate, e.g., overall cognition)
+  - DOMAIN (domain-level aggregate, e.g., executive functions, phonological processing)
+  - SUBDOMAIN (specific domain, e.g., inhibition, verbal working memory)
+  - TASK_OR_MEASURE (task- or paradigm-specific pooled estimate)
+
+- `evidence_group_id` is an identifier (e.g., EG01, EG02) used to link pooled results that are based on the same or largely overlapping sets of primary studies.
+
+Rules:
+- If multiple pooled results reuse the same underlying study pool (e.g., a domain-level estimate and its subdomains), assign them the same `evidence_group_id`.
+- If the paper clearly states that different pooled results are based on different subsets of studies, use different `evidence_group_id`s.
+- If it is unclear whether the study pools differ, conservconfirmatively assume overlap: reuse the same `evidence_group_id` and note the uncertainty in `Notes`.
+
+Optionally, describe the grouping briefly in `evidence_group_description`.
+
+---
+
+## Quality indicators (extraction only, no overall rating)
+Extract objective, reportable methodological features that can later support minimal quality appraisal, without judging quality.
+
+Code strictly as stated by authors:
+- `protocol_preregistered`: Yes / No / Unclear (e.g., PROSPERO, OSF)
+- `search_databases_reported`: Yes / No / Unclear (databases explicitly named)
+- `search_dates_reported`: Yes / No / Unclear (time window or search date given)
+- `inclusion_exclusion_criteria_explicit`: Yes / No / Unclear
+- `model_type_reported`: Random-effects / Fixed-effect / Both / Unclear
+- `heterogeneity_reported`: Yes / No / Unclear
+- `heterogeneity_metrics_reported`: list of reported metrics among ["I2","tau","tau2","Q","H2","other"]
+- `dependence_handling_reported`: Yes / No / Not_applicable / Unclear (e.g., multilevel, robust variance, averaging within study)
+- `publication_bias_assessed`: Yes / No / Unclear
+- `bias_method_reported`: Egger / Funnel_plot / Trim_and_fill / Selection_model / Other / None / Unclear
+- `sensitivity_analyses_reported`: Yes / No / Unclear
+
+Provide evidence anchors (≤25 words) for preregistration statements and publication-bias statements when present.
+
+---
+
+## Effect size fields and expectations
+Per the protocol data dictionary:
+- `Type_effect_size` should usually be “Standardized Mean Difference” for categorical meta-analyses (this includes g or d-type SMDs), unless a dimensional approach is used.
+- For dimensional meta-analyses, the effect size may be r, Fisher z, or similar.
+
+Always record the effect size type exactly as reported (e.g., Hedges g, Cohen d, SMD, r, Fisher z), but if the paper clearly states “SMD” use “Standardized Mean Difference”.
+
+---
+
+## Deterministic computations (allowed)
+You may compute values only when the computation is deterministic and the required inputs are clearly reported.
+
+1) Standard error from a clearly reported 95% CI on an approximately normal scale (SMD, g, d, Fisher z):
+Std_Err = (CI_upper - CI_lower) / (2 * 1.96)
+- If CI level is not stated as 95%, do not compute.
+- Record `se_source` as "derived_from_95ci" and note the computation in `Notes`.
+
+2) Tau from tau2 (if tau2 is explicitly reported as heterogeneity variance):
+Tau_heterogeneity = sqrt(tau2)
+- Record `tau_source` as "derived_from_tau2" and note it in `Notes`.
+- If it is unclear whether the reported value is tau or tau2, do not compute.
+
+Never compute Effect_size.
+Never convert between effect size metrics unless the paper explicitly provides the converted value.
+
+---
+
+## Output format (STRICT)
+Return only the following JSON object.
+No prose, no explanations outside the JSON.
+
+json: 
+{
+  "ID_article": null,
+  "Authors": null,
+  "Year": null,
+  "Title": null,
+  "Journal": null,
+
+  "quality_indicators": {
+    "protocol_preregistered": "Unclear",
+    "search_databases_reported": "Unclear",
+    "search_dates_reported": "Unclear",
+    "inclusion_exclusion_criteria_explicit": "Unclear",
+    "model_type_reported": "Unclear",
+    "heterogeneity_reported": "Unclear",
+    "heterogeneity_metrics_reported": [],
+    "dependence_handling_reported": "Unclear",
+    "publication_bias_assessed": "Unclear",
+    "bias_method_reported": "Unclear",
+    "sensitivity_analyses_reported": "Unclear"
+  },
+
+  "extraction_warnings": [],
+
+  "rows": [
+    {
+      "row_id": null,
+
+      "Target_disorder": null,
+      "Dimensional_approach": null,
+
+      "aggregation_level": null,
+      "evidence_group_id": null,
+      "evidence_group_description": null,
+
+      "Trait_measured": null,
+
+      "Domain_L1_general": null,
+      "Domain_L2_specific": null,
+      "Domain_L3_peculiar": null,
+
+      "Type_effect_size": null,
+      "Effect_size": null,
+      "Std_Err": null,
+      "se_source": "missing",
+
+      "CI_lower": null,
+      "CI_upper": null,
+      "ci_level": null,
+
+      "Tau_heterogeneity": null,
+      "tau_source": "missing",
+
+      "Publication_bias": null,
+
+      "Age_range": null,
+      "Age_group": null,
+
+      "k_primary_studies": null,
+      "sample_size_details": null,
+
+      "contrast_or_association_label": null,
+
+      "Notes": null,
+
+      "evidence_anchors": {
+        "domain_or_outcome_label": null,
+        "pooled_effect": null,
+        "comparison_or_association": null,
+        "publication_bias_statement": null,
+        "preregistration_statement": null
+      }
+    }
+  ],
+
+  "row_count": 0,
+
+  "missingness_flags": {
+    "any_effect_missing": false,
+    "any_ci_missing": false,
+    "any_se_derived_from_ci": false,
+    "any_tau_missing": false,
+    "any_tau_derived_from_tau2": false,
+    "any_domain_mapping_unclear": false
+  }
+}
+
+## Evidence anchor rules
+
+Evidence anchors must be direct quotes or near-quotes (≤25 words each).
+If the pooled effect is in a table, quote the row label plus the numeric entry (within the limit), and specify the table number in Notes if needed.
+If the exact numeric entry cannot be quoted succinctly, quote the closest text that uniquely identifies the result and add a precise location in Notes (e.g., “Table 2, WM row”).

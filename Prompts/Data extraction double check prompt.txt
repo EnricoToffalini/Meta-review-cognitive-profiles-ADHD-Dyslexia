@@ -1,0 +1,1 @@
+Are you sure that all relevant estimated effect sizes have been extracted from the article (pdf)? Please double check carefully, make sure that all relevant effect sizes for all protocol-relevant domains, subdomain, and tasks have been coded. If anything was missing, please fully rewrite the json for the article
