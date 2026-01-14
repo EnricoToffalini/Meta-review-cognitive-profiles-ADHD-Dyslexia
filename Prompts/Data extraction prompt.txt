@@ -66,89 +66,120 @@ Rules:
 - If you are unsure, fill only `Domain_L1_general` and leave `Domain_L2_specific` and `Domain_L3_peculiar` as null, and state the uncertainty in `Notes`.
 - If `Domain_L3_peculiar` is filled, `Domain_L1_general` and `Domain_L2_specific` must also be filled.
 
-### Domain_L1_general: controlled vocabulary (choose one when possible)
+### Domain_L1_general (MUST match exactly one of these strings)
+
+- Academic achievement
 - Attention
+- Decision-making / reinforcement learning
+- Delay gratification
 - Executive functions
-- Working memory
-- Short-term memory
-- Processing speed
-- Phonological processing
-- Rapid automatized naming
-- Reading-related cognition
+- Intelligence / general cognition
 - Language
 - Learning and memory
-- Intelligence / general cognition
-- Academic achievement
-- Decision-making / reinforcement learning
-- Reward processing / motivation
-- Perception (auditory/visual/time)
 - Oculomotor / motor control
+- Perception
+- Phonological processing
+- Processing speed
+- Rapid automatized naming
+- Reading-related cognition
 - Social cognition
-- Time perception
-- Other / unclear
+- Working memory
 
-### Domain_L2_specific: common subdomains (choose when supported)
-Attention:
+IMPORTANT:
+- Do NOT use: "Short-term memory", "Reward processing / motivation", "Perception (auditory/visual)", "Other / unclear".
+- If nothing fits confidently: set Domain_L1_general = null and explain in extraction_warnings.
+
+### Domain_L2_specific (controlled vocabulary, MUST match dataset strings exactly)
+Choose Domain_L2_specific ONLY if clearly supported. Otherwise set null.
+
+Allowed L2 values by L1:
+
+ATTENTION (Domain_L1_general = "Attention"):
 - Sustained attention
 - Selective attention
 - Orienting attention
 - Alerting attention
 - Executive attention
-- Attention networks
-- Visual-spatial attention
 - Temporal attention
+- Visual-spatial attention
+- Attention (general)
 
-Executive functions:
-- Inhibition / inhibitory control
+EXECUTIVE FUNCTIONS (Domain_L1_general = "Executive functions"):
 - Response inhibition
 - Set shifting / cognitive flexibility
 - Planning / organization
 - Error monitoring
 - Problem solving
+- Fluency
 
-Memory:
-- Verbal working memory
-- Visual-spatial working memory
-- Auditory working memory
-- Numerical working memory
-- Verbal short-term memory
-- Short-term memory (unspecified)
+WORKING MEMORY (Domain_L1_general = "Working memory"):
+- Working memory (general)
+- Working memory Verbal
+- Working memory Visual-spatial
+- Working memory Numerical
+
+LEARNING AND MEMORY (Domain_L1_general = "Learning and memory"):
 - Long-term memory
+- Verbal memory
+- Visual memory
 - Recognition memory
+- Memory acquisition
 
-Processing speed and timing:
+PROCESSING SPEED (Domain_L1_general = "Processing speed"):
 - Processing speed (general)
 - Reaction time
 - Reaction time variability
 - Response latency
 - Post-error slowing
 
-Phonological and reading-related:
+PERCEPTION (Domain_L1_general = "Perception"):
+- Time perception
+- Auditory perception
+- Visual perception
+
+DECISION-MAKING / REINFORCEMENT LEARNING (Domain_L1_general = "Decision-making / reinforcement learning"):
+- Risky decision-making
+- Reinforcement learning
+- Temporal discounting
+- Decision-making efficiency
+- Speed-accuracy tradeoff
+- Motor / nondecisional processing
+
+PHONOLOGICAL PROCESSING (Domain_L1_general = "Phonological processing"):
 - Phonological awareness
 - Phonemic awareness
 - Rime awareness
 - Phonological processing (other)
-- Reading accuracy
-- Reading fluency
+
+READING-RELATED COGNITION (Domain_L1_general = "Reading-related cognition"):
 - Reading/decoding
+- Reading fluency
+- Reading comprehension
 - Orthographic knowledge
 - Lexical orthographic processing
 - Sub-lexical orthographic processing
 
-RAN:
+RAPID AUTOMATIZED NAMING (Domain_L1_general = "Rapid automatized naming"):
 - Rapid automatized naming
 - Naming speed
+- Naming accuracy
 
-Decision/reward:
-- Reinforcement learning
-- Temporal discounting
-- Risky decision-making
-- Delay aversion
+SOCIAL COGNITION (Domain_L1_general = "Social cognition"):
+- Face recognition
+- Emotion recognition
+- Theory of Mind
+- Empathy
+- Everyday social skills
 
-Perception:
-- Auditory perception
-- Visual perception
-- Time perception
+LANGUAGE (Domain_L1_general = "Language"):
+- Morphological awareness
+(otherwise null)
+
+OTHER L1s:
+- Academic achievement: set L2 null
+- Intelligence / general cognition: L2 can be "Intelligence / general cognition" or null
+- Oculomotor / motor control: set L2 null unless a future controlled list is defined
+- Delay gratification: set L2 null (for backward compatibility with existing dataset)
 
 ### Domain_L3_peculiar: free text examples (only if explicitly named)
 Examples: Attentional blink, Visual attention span, Visual search, Attentional orienting, Coherent dot motion, Post-error slowing, Time production, Time estimation, etc.
