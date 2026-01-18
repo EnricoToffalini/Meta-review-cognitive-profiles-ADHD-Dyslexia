@@ -3,7 +3,7 @@
 - L’estrazione è avvenuta in DUE FASI:
   1) una prima estrazione iniziale;
   2) una seconda estrazione successiva, effettuata DOPO che io ti ho chiesto esplicitamente di verificare e ricontrollare la completezza e l’accuratezza delle informazioni.
-- Devi considerare come AUTOREVOLI e VINCOLANTI **solo ed esclusivamente** le informazioni fornite da te nella SECONDA estrazione (la versione più recente delle informazioni).
+- Devi considerare come AUTOREVOLI e VINCOLANTI **solo ed esclusivamente** le informazioni fornite da te nella SECONDA estrazione (la versione più recente delle informazioni). se non le trovi più perché la chat è diventata troppo lunga, avvisami e non procedere oltre.
 - Devi IGNORARE completamente la prima estrazione e qualsiasi versione precedente dei dati.
 - Ora devi considerare ESCLUSIVAMENTE la combinazione:
   codice_paper + row_id = "2011_1"
