@@ -1,0 +1,81 @@
+## Istruzioni operative
+- Io ti fornisco:
+  1) il PDF del paper
+  2) l’identificativo del paper + specifica riga da estrarre è "row_id": "2011_1"
+
+## Unità di output
+- Devi produrre **UNA SOLA RIGA**
+- La riga corrisponde **ESATTAMENTE** alla row_id indicata
+- NON devi includere intestazioni di colonna
+- NON devi andare a capo
+
+## Principio fondamentale (VINCOLANTE)
+- Devi riportare **in modo accurato, completo e fedele** TUTTE le informazioni relative **esclusivamente** alla row_id indicata
+- Ogni cella deve riflettere **esattamente** il contenuto del paper per quella specifica pooled estimate
+- NON devi riassumere, accorciare o semplificare informazioni se sono presenti nel paper
+- NON devi omettere informazioni rilevanti presenti per quella row_id
+- Se una variabile è presente nel paper per quella row_id, **DEVE essere riportata**
+- Se una variabile NON è riportata nel paper per quella row_id, **DEVE essere lasciata vuota**
+
+## Colonne richieste (ORDINE OBBLIGATORIO)
+L’output deve contenere **27 colonne**, in questo ordine esatto, corrispondenti alle variabili comprese tra "Target_disorder" e "Notes",
+con l’aggiunta della colonna **direction** (sempre vuota) tra Type_effect_size e Effect_size:
+
+1. Target_disorder
+2. Dimensional_approach
+3. aggregation_level
+4. evidence_group_id
+5. evidence_group_description
+6. Trait_measured
+7. Domain_L1_general
+8. Domain_L2_specific
+9. Domain_L3_peculiar
+10. Type_effect_size
+11. direction  (SEMPRE VUOTA)
+12. Effect_size
+13. Std_Err
+14. se_source
+15. CI_lower
+16. CI_upper
+17. ci_level
+18. Tau_heterogeneity
+19. tau_source
+20. Publication_bias
+21. Age_range
+22. Age_group
+23. Age_group_detail
+24. k_primary_studies
+25. sample_size_details
+26. contrast_or_association_label
+27. Notes
+
+## Formato dell’output (CRITICO – NON DEROGABILE)
+- L’output **DEVE essere fornito all’interno di un BLOCCO DI CODICE R**
+- Il blocco deve contenere **una sola riga di testo**
+- I campi devono essere separati da **TAB REALI (tabulazione)**
+- NON usare virgole, punti e virgola o spazi come separatori
+- NON aggiungere righe vuote
+- NON aggiungere newline finale
+
+## Regole per le celle
+- Ogni cella deve contenere solo numeri o testo **estratti fedelmente dal paper** per la row_id indicata
+- `direction` deve essere SEMPRE vuota → quindi **due TAB consecutivi** tra Type_effect_size ed Effect_size
+- Celle non riportate nel paper per quella row_id: lasciare vuote (TAB consecutivi)
+- Numeri riportati **ESATTAMENTE** come nel paper (nessuna conversione o arrotondamento)
+- Testo riportato **fedelmente**, senza riformulazioni o sintesi
+
+## Regole stringenti
+- Non inferire valori mancanti
+- Non correggere reporting ambiguo
+- Non calcolare nulla se non già esplicitamente consentito dal protocollo
+- Non sostituire descrizioni dettagliate con versioni abbreviate
+- Notes va compilato **solo** se nel paper è presente una nota rilevante per quella specifica row_id
+
+## Output finale
+- Restituisci **ESCLUSIVAMENTE**:
+  - **un singolo blocco di codice R**
+  - contenente **una sola riga**
+  - con **27 celle separate da TAB**
+- Nessuna spiegazione
+- Nessun JSON
+- Nessun commento fuori dal blocco
