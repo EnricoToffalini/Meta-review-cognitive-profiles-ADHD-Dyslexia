@@ -8,15 +8,35 @@ library(metafor)
 library(dplyr)
 ts = 30
 
+# import dataset and check features
 df = data.frame(read_excel("Data/coded-Dataset.xlsx"))
+nrow(df)
 length(unique(df$ID_article))
+
+# check reasons for exclusion
 table(df$why_not_include[df$include==0],df$Target_disorder[df$include==0])
-df = df[df$include==1 & !df$Domain_L1_general%in%c("Other / unclear"),]
+# exclude effects for those reasons
+df = df[df$include==1,]
+# for now, keep only effects that are SMDs
+df = df[grepl(paste(c("hedges", "cohen", "standardized"), collapse = "|"), tolower(df$Type_effect_size)) & !grepl("unstandardized",tolower(df$Type_effect_size)) , ]
+# for now, exclude "Other / unclear" domains
+df = df[!df$Domain_L1_general%in%c("Other / unclear"),]
+# for now, remove where there's no clear primary L1 domain
+df = df[!is.na(df$Domain_L1_general), ]
+# for now, assign "mixed" to unclear df$Age_group
+df$Age_group[is.na(df$Age_group) | !df$Age_group%in%c("child","mixed","adult")] = "mixed"
+
+# turn all effect sizes in the appropriate direction
 df$Effect_size = ifelse(df$direction=="positive",df$Effect_size,df$Effect_size*-1)
+
+# age group to factor
 df$Age_group = factor(df$Age_group, levels=c("child","mixed","adult"))
+
+# check remaining features
+nrow(df)
 length(unique(df$ID_article))
-table(df$Target_disorder,df$Domain_L1_general)
-table(df$Target_disorder,df$Domain_L2_specific)
+#table(df$Target_disorder,df$Domain_L1_general)
+#table(df$Target_disorder,df$Domain_L2_specific)
 
 ############################################################
 
@@ -33,7 +53,7 @@ table(dx$Domains)
 #### select ADHD - ad hoc primary domains
 disorder = "ADHD"; domains = "primary"
 dx = df[df$Target_disorder==disorder,]
-for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i]=="Working memory") dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
+for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i] %in% c("Working memory","Perception")) dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
 dx$Domains = dx$Domain_L1_general
 length(unique(dx$ID_article))
 table(dx$Domains)
@@ -52,14 +72,15 @@ table(dx$Domains)
 
 # Prepare data
 
-dxx = dx %>%
-  filter(!is.na(Effect_size), !is.na(Domains), !is.na(ID_article)) %>%
-  mutate(
-    Domains = as.factor(Domains),
-    ID_article = as.factor(ID_article)
-  ) %>%
-  group_by(ID_article, Domains) %>%
-  ungroup()
+dxx = data.frame(dx %>%
+                   filter(!is.na(Effect_size), !is.na(Domains), !is.na(ID_article)) %>%
+                   mutate(
+                     Domains = as.factor(Domains),
+                     ID_article = as.factor(ID_article)
+                   ) %>%
+                   group_by(ID_article, Domains) %>%
+                   ungroup()
+)
 for(dom in unique(dxx$Domains)) dxx$Std_Err[is.na(dxx$Std_Err)] = max(dxx$Std_Err[dxx$Domains==dom],na.rm=T)
 #dxx = dxx %>% filter(!is.na(dxx$Std_Err), !is.infinite(dxx$Std_Err))
 dxx$Std_Err[is.infinite(dxx$Std_Err)] = NA
@@ -116,8 +137,8 @@ print(meta_summary)
 
 # Create combined plot (all dots + meta-meta-analysis)
 ggplot() +
-  coord_flip() +
   theme_bw() +
+  coord_flip(ylim=c(-1.7,max(dxx$Effect_size))) +
   # (A) all extracted effects
   geom_point(
     data = dxx,
