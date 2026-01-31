@@ -18,7 +18,7 @@ table(df$why_not_include[df$include==0],df$Target_disorder[df$include==0])
 # exclude effects for those reasons
 df = df[df$include==1,]
 # for now, keep only effects that are SMDs
-df = df[grepl(paste(c("hedges", "cohen", "standardized"), collapse = "|"), tolower(df$Type_effect_size)) & !grepl("unstandardized",tolower(df$Type_effect_size)) , ]
+df = df[grepl(paste(c("hedges", "cohen", "SMD"), collapse = "|"), tolower(df$Type_effect_size)) , ]
 # for now, exclude "Other / unclear" domains
 df = df[!df$Domain_L1_general%in%c("Other / unclear"),]
 # for now, remove where there's no clear primary L1 domain
@@ -27,7 +27,7 @@ df = df[!is.na(df$Domain_L1_general), ]
 df$Age_group[is.na(df$Age_group) | !df$Age_group%in%c("child","mixed","adult")] = "mixed"
 
 # turn all effect sizes in the appropriate direction
-df$Effect_size = ifelse(df$direction=="positive",df$Effect_size,df$Effect_size*-1)
+df$Effect_size = ifelse(df$direction=="negative",df$Effect_size,df$Effect_size*-1)
 
 # age group to factor
 df$Age_group = factor(df$Age_group, levels=c("child","mixed","adult"))
@@ -46,6 +46,7 @@ length(unique(df$ID_article))
 disorder = "Dyslexia"; domains = "primary"
 dx = df[df$Target_disorder==disorder,]
 for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i]=="Working memory") dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
+dx = dx[dx$Domain_L1_general != "Academic achievement", ]
 dx$Domains = dx$Domain_L1_general
 length(unique(dx$ID_article))
 table(dx$Domains)
@@ -138,7 +139,7 @@ print(meta_summary)
 # Create combined plot (all dots + meta-meta-analysis)
 ggplot() +
   theme_bw() +
-  coord_flip(ylim=c(-1.7,max(dxx$Effect_size))) +
+  coord_flip(ylim=c(-1.5,max(c(0,dxx$Effect_size)))) +
   # (A) all extracted effects
   geom_point(
     data = dxx,

@@ -118,7 +118,6 @@ If any mapping decision is non-trivial, briefly document it in `Notes`.
 - Phonological processing
 - Processing speed
 - Rapid automatized naming
-- Reading-related cognition
 - Social cognition
 - Working memory
 
@@ -132,6 +131,13 @@ IMPORTANT:
 Choose `Domain_L2_specific` ONLY if clearly supported. Otherwise set null.
 
 Allowed L2 values by L1:
+
+ACADEMIC ACHIEVEMENT (Domain_L1_general = "Academic achievement"):
+- Math
+- Reading/decoding
+- Spelling/writing
+- Reading comprehension
+- Reading-related cognition
 
 ATTENTION (Domain_L1_general = "Attention"):
 - Sustained attention
@@ -189,14 +195,6 @@ PHONOLOGICAL PROCESSING (Domain_L1_general = "Phonological processing"):
 - Phonemic awareness
 - Rime awareness
 - Phonological processing (other)
-
-READING-RELATED COGNITION (Domain_L1_general = "Reading-related cognition"):
-- Reading/decoding
-- Reading fluency
-- Reading comprehension
-- Orthographic knowledge
-- Lexical orthographic processing
-- Sub-lexical orthographic processing
 
 RAPID AUTOMATIZED NAMING (Domain_L1_general = "Rapid automatized naming"):
 - Rapid automatized naming
