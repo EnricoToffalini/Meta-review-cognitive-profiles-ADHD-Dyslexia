@@ -42,19 +42,19 @@ length(unique(df$ID_article))
 
 # Selection of population and domains
 
+#### select ADHD - ad hoc primary domains
+disorder = "ADHD"; domains = "primary"
+dx = df[df$Target_disorder==disorder,]
+for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i] %in% c("Working memory","Perception")) dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
+dx$Domains = dx$Domain_L1_general
+length(unique(dx$ID_article))
+table(dx$Domains)
+
 #### select Dyslexia - ad hoc primary domains
 disorder = "Dyslexia"; domains = "primary"
 dx = df[df$Target_disorder==disorder,]
 for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i]=="Working memory") dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
 dx = dx[dx$Domain_L1_general != "Academic achievement", ]
-dx$Domains = dx$Domain_L1_general
-length(unique(dx$ID_article))
-table(dx$Domains)
-
-#### select ADHD - ad hoc primary domains
-disorder = "ADHD"; domains = "primary"
-dx = df[df$Target_disorder==disorder,]
-for(i in 1:nrow(dx)) if(dx$Domain_L1_general[i] %in% c("Working memory","Perception")) dx$Domain_L1_general[i] = dx$Domain_L2_specific[i]
 dx$Domains = dx$Domain_L1_general
 length(unique(dx$ID_article))
 table(dx$Domains)
