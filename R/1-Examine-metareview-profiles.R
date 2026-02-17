@@ -12,6 +12,10 @@ ts = 30
 df = data.frame(read_excel("Data/coded-Dataset.xlsx"))
 nrow(df)
 length(unique(df$ID_article))
+length(unique(df$Title))
+for(t in unique(df$Title)){
+  if(length(unique(df$ID_article[df$Title==t]))>1) print(unique(df$ID_article[df$Title==u]))
+}
 
 # check reasons for exclusion
 table(df$why_not_include[df$include==0],df$Target_disorder[df$include==0])
